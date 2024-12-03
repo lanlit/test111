@@ -1,0 +1,16 @@
+FROM  python:3.11.slim
+
+WORKDIR / ff  
+
+COPY . . 
+
+RUN pip install django 
+
+RUN python manage.py migrate
+
+EXPOSE 9999
+
+CMD ["python" ,"manage.py","runserver","0.0.0.0:9999"]
+
+
+

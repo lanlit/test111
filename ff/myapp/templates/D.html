@@ -1,0 +1,7 @@
+<h4>delete {{course.id}}</h4>
+<p>want to del {{cousre.id}}-{{cousre.name}}-{{cousre.teacter}}</p>
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">go</button>
+</form>
